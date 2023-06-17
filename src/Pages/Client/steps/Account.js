@@ -2,7 +2,7 @@ import { useStepperContext } from "../StepperContext";
 
 export default function Account() {
   const { userData, setUserData } = useStepperContext();
-
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUserData({ ...userData, [name]: value });
