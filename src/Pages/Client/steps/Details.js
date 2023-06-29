@@ -1,5 +1,5 @@
 import { useStepperContext } from "../StepperContext";
-// import { useEffect } from 'react';
+//import { useEffect } from 'react';
 
 export default function Details() {
   const { userData, setUserData } = useStepperContext();

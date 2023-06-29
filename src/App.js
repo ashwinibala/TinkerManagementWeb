@@ -5,6 +5,7 @@ import { Footer } from "./shared/Footer";
 import { Home } from "./Pages/Home/Home";
 import  AddClient  from "./Pages/Client/AddClient.jsx";
 
+
 function App() {
   return (
     <div className="App">
@@ -14,11 +15,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/clientRegistration" element={<AddClient />} />
-            
           </Routes>
           <Footer />
         </Router>
-     
+      
     </div>
   );
 }

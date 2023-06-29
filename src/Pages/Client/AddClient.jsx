@@ -1,8 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Stepper from "./Stepper";
 import StepperControl from "./StepperControl";
 import { UseStepperContextProvider } from "./StepperContext";
-
 
 
 
@@ -11,17 +10,18 @@ import Details from "./steps/Details";
 import Final from "./steps/Final";
 
 function AddClient() {
-  const [currentStep, setCurrentStep] = useState(1);
+  const [currentStep, setCurrentStep] = useState(0); 
   const [clientError, setClientError] = useState([]);
+  const [isNext, setIsNext] = useState(0);
+  
+  
   const steps = [
     "Personal Details",
     "Account Information",
     "Complete",
   ];
 
-  const addError = (newError) => {
-    setClientError([...clientError, newError]);
-  };
+  
 
   const displayStep = (step) => {
     switch (step) {
@@ -40,46 +40,53 @@ function AddClient() {
     }
   };
 
+  const addError = (newError) => {
+
+    setClientError([...clientError].concat(newError));
+  };
+
   const errorCheck =(userData) => {
-    if(!userData.hasOwnProperty("firstName"))
+    if((!userData.hasOwnProperty("firstName")) || userData.firstName === "")
       {
-        console.log('First Name is mandatory');
-        addError('First Name is mandatory');
+        addError("First Name is mandatory");
+      }
+      if((!userData.hasOwnProperty("lastName")) || userData.lastName === "")
+      {
+        addError("Last Name is mandatory");  
       }
   }
 
-  
-
-
-  const handleClick = (direction, userData) => {
+  useEffect(() => {
     let newStep = currentStep;
-
-   
-    if(direction === "Next" || direction === "Confirm")
-    {
-      // console.log(clientError);
-      // if (clientError.length === 0){
-      //   newStep++;
-      // }
-      errorCheck(userData);
-      if(!userData.hasOwnProperty("firstName"))
-      {
-       console.log('First Name is mandatory');
-      }
-      else{
-        newStep++;
-      }
-
-    }
-    else {
-      newStep--;
-    }
-
-    
+    console.log(clientError);
+    if (clientError.length === 0){
+      newStep++; }
 
     // check if steps are within bounds
     newStep > 0 && newStep <= steps.length && setCurrentStep(newStep);
+  }, [isNext]);
+
+
+  const handleClick = (direction, userData) => {
+
+     setClientError([]); // Clear the clientError state
+    console.log(clientError);
+    
+    if(direction === "Next" || direction === "Confirm")
+    {
+      errorCheck(userData);
+      setIsNext(isNext + 1);
+    }
+    else {
+      let newStep = currentStep;
+      newStep--;
+      // check if steps are within bounds
+    newStep > 0 && newStep <= steps.length && setCurrentStep(newStep);
+    }
+ 
   };
+
+  
 
   return (
     <UseStepperContextProvider>
@@ -94,7 +101,7 @@ function AddClient() {
           <div className="my-10 p-10 ">
           
               {displayStep(currentStep)}
-              
+            
           
           </div>
         </div>
@@ -107,14 +114,18 @@ function AddClient() {
             steps={steps}
           />
         )}
+
+       
       </div>
       <div class="w-1/5 flex flex-col justify-center items-center">
           <div class="bg-pink-100">
+            
                 <ul>
                 {clientError.map((error, index) => (
                   <li key={index}>{error}</li>
                 ))}
               </ul>
+            
           </div>
       </div>
       </div>
