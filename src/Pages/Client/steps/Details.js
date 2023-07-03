@@ -16,9 +16,10 @@ export default function Details() {
 
   return (
     <div className="flex flex-col ">
+      <p className="text-red-500 font-bold"> * fields are mandatory</p>
       <div className="w-full mx-2 flex-1">
         <div className="font-bold h-6 mt-3 text-gray-500 text-xs leading-8 uppercase">
-          First Name
+          First Name <span className="text-red-500 font-bold">*</span>
         </div>
         <div className="bg-white my-2 p-1 flex border border-gray-200 rounded">
           <input
@@ -32,7 +33,7 @@ export default function Details() {
       </div>
       <div className="w-full mx-2 flex-1">
         <div className="font-bold h-6 mt-3 text-gray-500 text-xs leading-8 uppercase">
-          Last Name
+          Last Name <span className="text-red-500 font-bold">*</span>
         </div>
         <div className="bg-white my-2 p-1 flex border border-gray-200 rounded">
           <input
@@ -46,28 +47,28 @@ export default function Details() {
       </div>
       <div className="w-full mx-2 flex-1">
         <div className="font-bold h-6 mt-3 text-gray-500 text-xs leading-8 uppercase">
-          Email
+          Email <span className="text-red-500 font-bold">*</span>
         </div>
         <div className="bg-white my-2 p-1 flex border border-gray-200 rounded">
           <input
             onChange={handleChange}
             value={userData["email"] || ""}
             name="email"
-            placeholder="Email"
+            placeholder="Ex: john@doe.com"
             className="p-1 px-2 appearance-none outline-none w-full text-gray-800"
           />
         </div>
       </div>
       <div className="w-full mx-2 flex-1">
         <div className="font-bold h-6 mt-3 text-gray-500 text-xs leading-8 uppercase">
-          Phone Number
+          Phone Number <span className="text-red-500 font-bold">*</span>
         </div>
         <div className="bg-white my-2 p-1 flex border border-gray-200 rounded">
           <input
             onChange={handleChange}
             value={userData["phone"] || ""}
             name="phone"
-            placeholder="Phone Number"
+            placeholder="Ex: 1234567890"
             className="p-1 px-2 appearance-none outline-none w-full text-gray-800"
           />
         </div>
