@@ -5,7 +5,6 @@ import { Footer } from "./shared/Footer";
 import { Home } from "./Pages/Home/Home";
 import  AddClient  from "./Pages/Client/AddClient.jsx";
 
-
 function App() {
   return (
     <div className="App">
