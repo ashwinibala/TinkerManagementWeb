@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import Stepper from "./Stepper";
 import StepperControl from "./StepperControl";
 import { UseStepperContextProvider } from "./StepperContext";
-
-
+import clientValidation from "./clientValidation";
 
 import Account from "./steps/Account";
 import Details from "./steps/Details";
@@ -13,15 +12,13 @@ function AddClient() {
   const [currentStep, setCurrentStep] = useState(0); 
   const [clientError, setClientError] = useState([]);
   const [isNext, setIsNext] = useState(0);
-  
+  const [clientDetails, setClientDetails] = useState([]);
   
   const steps = [
     "Personal Details",
     "Account Information",
     "Complete",
   ];
-
-  
 
   const displayStep = (step) => {
     switch (step) {
@@ -40,23 +37,11 @@ function AddClient() {
     }
   };
 
-  const addError = (newError) => {
-
-    setClientError([...clientError].concat(newError));
-  };
-
-  const errorCheck =(userData) => {
-    if((!userData.hasOwnProperty("firstName")) || userData.firstName === "")
-      {
-        addError("First Name is mandatory");
-      }
-      if((!userData.hasOwnProperty("lastName")) || userData.lastName === "")
-      {
-        addError("Last Name is mandatory");  
-      }
-  }
+  
 
   useEffect(() => {
+    console.log(clientDetails);
+
     let newStep = currentStep;
     console.log(clientError);
     if (clientError.length === 0){
@@ -69,15 +54,15 @@ function AddClient() {
 
   const handleClick = (direction, userData) => {
 
-     setClientError([]); // Clear the clientError state
-    console.log(clientError);
-    
+    setClientDetails(userData);
+    //console.log(clientDetails);
     if(direction === "Next" || direction === "Confirm")
     {
-      errorCheck(userData);
+      setClientError(clientValidation(userData,currentStep));
       setIsNext(isNext + 1);
     }
     else {
+      setClientError([]);
       let newStep = currentStep;
       newStep--;
       // check if steps are within bounds
