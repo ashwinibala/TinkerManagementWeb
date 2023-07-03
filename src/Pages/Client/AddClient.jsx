@@ -3,6 +3,7 @@ import Stepper from "./Stepper";
 import StepperControl from "./StepperControl";
 import { UseStepperContextProvider } from "./StepperContext";
 import clientValidation from "./clientValidation";
+import apiService from "../../Services/apiService";
 
 import Account from "./steps/Account";
 import Details from "./steps/Details";
@@ -26,8 +27,8 @@ function AddClient() {
         return <Details />;
       case 2:
         return <Account />;
-        case 3:
-          return <Final />;
+      case 3:
+        return <Final />;
       // case 3:
       //   return <Payment />;
         
@@ -44,8 +45,27 @@ function AddClient() {
 
     let newStep = currentStep;
     console.log(clientError);
+
+    
+
+    if(newStep === 1 || newStep === 0) {
     if (clientError.length === 0){
       newStep++; }
+    }
+   else if(newStep === 2) {
+      if (clientError.length === 0){
+      var Result = apiService(clientDetails);
+      console.log(Result);
+       if(Result) 
+         {
+            newStep++;
+          } 
+      else 
+         {
+           alert("Registration failed");
+         }
+      }
+      }
 
     // check if steps are within bounds
     newStep > 0 && newStep <= steps.length && setCurrentStep(newStep);
