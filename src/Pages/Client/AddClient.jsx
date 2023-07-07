@@ -11,7 +11,7 @@ import Final from "./steps/Final";
 
 function AddClient() {
   const [currentStep, setCurrentStep] = useState(0); 
-  const [clientError, setClientError] = useState([]);
+  const [clientError, setClientError] = useState({});
   const [isNext, setIsNext] = useState(0);
   const [clientDetails, setClientDetails] = useState([]);
   
@@ -24,9 +24,9 @@ function AddClient() {
   const displayStep = (step) => {
     switch (step) {
       case 1:
-        return <Details />;
+        return <Details clientError = {clientError}/>;
       case 2:
-        return <Account />;
+        return <Account clientError = {clientError}/>;
       case 3:
         return <Final />;
       // case 3:
@@ -49,11 +49,16 @@ function AddClient() {
     
 
     if(newStep === 1 || newStep === 0) {
-    if (clientError.length === 0){
-      newStep++; }
+      console.log(clientError.length);
+    // if (clientError.length === 0){
+    //   newStep++; }
+    if(Object.keys(clientError).length === 0)
+    {
+      newStep++;
+    }
     }
    else if(newStep === 2) {
-      if (clientError.length === 0){
+    if(Object.keys(clientError).length === 0){
       var Result = apiService(clientDetails);
       console.log(Result);
        if(Result) 
@@ -95,8 +100,8 @@ function AddClient() {
 
   return (
     <UseStepperContextProvider>
-    <div class="flex justify-center">
-    <div class="w-1/5"></div>
+    <div className=" justify-center">
+    
       <div className="mx-auto rounded-2xl bg-white pb-2 shadow-xl md:w-1/2">
         {/* Stepper */}
         <div className="horizontal container mt-5 ">
@@ -122,18 +127,8 @@ function AddClient() {
 
        
       </div>
-      <div class="w-1/5 flex flex-col justify-center items-center">
-          <div class="bg-pink-100">
-            
-                <ul>
-                {clientError.map((error, index) => (
-                  <li key={index}>{error}</li>
-                ))}
-              </ul>
-            
-          </div>
-      </div>
-      </div>
+      
+    </div>
     </UseStepperContextProvider>
   );
 }

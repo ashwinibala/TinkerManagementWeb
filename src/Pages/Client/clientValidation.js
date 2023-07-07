@@ -20,27 +20,31 @@ const clientValidation = (userData,currentStep) => {
     {
         if((!userData.hasOwnProperty("firstName")) || userData.firstName === "")
         {
-            error.push("First Name is mandatory");
+            error.firstName = "First Name is mandatory";
         }
         if((!userData.hasOwnProperty("lastName")) || userData.lastName === "")
         {
-            error.push("Last Name is mandatory");  
+            error.lastName = "Last Name is mandatory";  
         }
         if((!userData.hasOwnProperty("email")) || userData.email === "")
         {
-            error.push("Email is mandatory");
+            error.email = "Email is mandatory";
         } 
         else if(!check_format(userData.email, email_format)) 
         {
-            error.push("Enter Email Id in correct format");
+            error.email = "Enter Email Id in correct format";
         }
         if((!userData.hasOwnProperty("phone")) || userData.phone === "")
         {
-            error.push("Phone Number is mandatory");  
+            error.phone = "Phone Number is mandatory";  
         }
         else if(!check_format(userData.phone, phone_format)) 
         {
-            error.push("Enter Phone Number in correct format");
+            error.phone = "Enter Phone Number in correct format";
+        }
+        if((!userData.hasOwnProperty("category")) || userData.category === "")
+        {
+            error.category = "Please select a service category";
         }
     }
 
@@ -48,19 +52,19 @@ const clientValidation = (userData,currentStep) => {
     {
         if((!userData.hasOwnProperty("username")) || userData.username === "")
         {
-            error.push("Username is mandatory");
+            error.username = "Username is mandatory";
         } 
         else if(!check_format(userData.username, username_format)) 
         {
-            error.push("Enter Username in correct format");
+            error.username = "Enter Username in correct format";
         }
         if((!userData.hasOwnProperty("password")) || userData.password === "")
         {
-            error.push("Password is mandatory");  
+            error.password = "Password is mandatory";  
         }
         else if(!check_format(userData.password, password_format)) 
         {
-            error.push("Enter Password in correct format");
+            error.password = "Enter Password in correct format";
         }
     }
     return(error)
