@@ -38,8 +38,6 @@ function AddClient() {
     }
   };
 
-  
-
   useEffect(() => {
     console.log(clientDetails);
 
@@ -61,6 +59,7 @@ function AddClient() {
     if(Object.keys(clientError).length === 0){
       var Result = apiService(clientDetails);
       console.log(Result);
+      
        if(Result) 
          {
             newStep++;
