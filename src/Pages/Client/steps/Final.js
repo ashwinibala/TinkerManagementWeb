@@ -1,4 +1,34 @@
-export default function Final() {
+import apiService from "../../../Services/apiService";
+import { useState } from "react";
+
+export default function Final({clientDetails}) {
+  const [content, setContent] = useState("Loading");
+  const [sContent,setSContent] = useState("");
+  const [button, setButton] = useState("");
+  
+  (async () => {
+    try {
+      const Result = await apiService(clientDetails).catch((error) => {
+        console.log(error); // Handle any errors
+      });
+  
+      console.log(Result);
+  
+      if (Result && Result.responseCode === 200) {
+        setContent("Congratulations");
+        setSContent("Your Account has been created");
+        setButton("Sign In");
+      } else {
+        setContent("Please Try Again Later");
+        setSContent("There is some error in creating account");
+        setButton("Try Again");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  })();
+  
+
     return (
       <div className="container md:mt-10">
         <div className="flex flex-col items-center">
@@ -24,14 +54,14 @@ export default function Final() {
           </div>
   
           <div className="mt-3 text-xl font-semibold uppercase text-green-500">
-            Congratulations!
+            {content}
           </div>
           <div className="text-lg font-semibold text-gray-500">
-            Your Account has been created.
+            {sContent}
           </div>
           <a className="mt-10" href="/user/dashboard">
             <button className="h-10 px-5 text-green-700 transition-colors duration-150 border border-gray-300 rounded-lg focus:shadow-outline hover:bg-green-500 hover:text-green-100">
-              Close
+              <a href="/">{button}</a>
             </button>
           </a>
         </div>
