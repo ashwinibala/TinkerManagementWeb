@@ -12,6 +12,7 @@ export const Header = () => {
             <div className="links">
                 <Link to="/"> Home </Link>
                 <Link to="/clientRegistration"> Add New Tinker </Link>
+                <Link to="/booking"> Book a Service </Link>
             </div>
       </div>
     </div>
