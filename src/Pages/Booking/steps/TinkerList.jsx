@@ -22,8 +22,8 @@ const handleClick = (e) => {
                   {tinkerList.map((item) => (
                     <div> 
                      <label >
-                      <input type="radio" name="client" value={item.clientId} onChange={handleClick} key={item.clientId}></input>
-                      {item.name}
+                      <input type="radio" name="client" value={1} onChange={handleClick} key={item.id}></input>
+                      {item.firstname}{item.lastname}
                      </label>
                      </div>
                   ))}

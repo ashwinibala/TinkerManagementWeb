@@ -51,7 +51,7 @@ function AddClient() {
     if(newStep === 1 || newStep === 0 || newStep === 2) {
       console.log(clientError.length);
 
-      if(newStep === 2){
+      if(newStep === 2 && Object.keys(clientError).length === 0){
         (async () => {
           try {
             const Result = await apiService(clientDetails).catch((error) => {

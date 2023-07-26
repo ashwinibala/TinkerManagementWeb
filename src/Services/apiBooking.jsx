@@ -4,7 +4,7 @@ async function apiBooking(customerData) {
     try {
         const url = `http://localhost:8080/clientavailability/${customerData.category}/${customerData.date}/${customerData.timeSlot}`;
         console.log(url);
-        const data = await fetch(url, {
+        const response = await fetch(url, {
        method: 'GET',
        headers: {
          'Accept': 'application/json',
@@ -13,7 +13,7 @@ async function apiBooking(customerData) {
        }
      });
    
-     
+     const data = await response.json();
      console.log(data);
      
      if(data !== undefined)
