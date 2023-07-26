@@ -3,10 +3,10 @@ import React from "react";
 export const Home = () => {
   return (
     
-    
-      <div className="text-3xl text-blue-900 font-bold">
+    <div className="bg-green-50">
+      <div className="text-3xl text-green-900 font-bold">
       
-      <div className=" bg-gray-200 rounded-lg p-4">
+      <div className="bg-green-200 rounded-lg p-4">
         <h2 style={{ fontSize: '40px' }} className="text-center">Welcome to Tinker!</h2>
 
         
@@ -21,12 +21,12 @@ export const Home = () => {
       
       <div className="grid grid-cols-2 gap-1 pt-10 " >
         
-      <div className=" bg-gray-200 rounded-lg p-4">
+      <div className=" bg-green-200 rounded-lg p-4">
           
       <h2 className="text-2xl font-bold mb-2">Electrician</h2>
-            <p style={{ fontSize: '19px' }} className="text-gray-700 leading-normal text-justify font-normal">Installing electrical wiring, circuits, and components in new construction or during renovations.
+            <p style={{ fontSize: '19px' }} className="text-gray-700 leading-normal font-ui-sans-serif text-justify font-normal"><span class="italic">Installing electrical wiring, circuits, and components in new construction or during renovations.
               Identifying and resolving electrical problems, including but not limited to power interruptions,
-              defective wiring, malfunctioning electrical outlets or switches, and issues with circuit breakers.Installing or repairing indoor and outdoor lighting systems.
+              defective wiring, malfunctioning electrical outlets or switches, and issues with circuit breakers and lighting systems.</span>
             </p>
       </div>
       <div>
@@ -42,11 +42,11 @@ export const Home = () => {
           <img src={require('./images/plumbing.jpg')} alt="Plumbing" className="w-64  h-64 rounded-lg shadow-lg ml-auto"/>
         </div>
         
-       <div className=" bg-gray-200 rounded-lg p-4" >
+       <div className=" bg-green-200 rounded-lg p-4" >
           <h2 className="text-2xl font-bold mb-2">Plumbing</h2>
-          <p style={{ fontSize: '19px' }} className="text-gray-700 leading-normal text-justify font-normal">Installing and repairing pipes for water supply, drainage, and sewage systems.
-            Identifying and repairing leaks in pipes, faucets, toilets, or other plumbing components.Performing drain cleaning by utilizing different methods such as snaking, hydro-jetting,
-            or chemical drain cleaners to unclog and clear obstructed drains and pipes.
+          <p style={{ fontSize: '19px' }} className="text-gray-700 leading-normal font-ui-sans-serif text-justify font-normal"><span class="italic">Installing and repairing pipes for water supply, drainage, and sewage systems.
+            Identifying and repairing leaks in all plumbing components. Performing drain cleaning by utilizing different methods such as snaking, hydro-jetting,
+            or chemical drain cleaners to unclog and clear obstructed drains and pipes.</span>
           </p>
        </div>
   
@@ -56,11 +56,11 @@ export const Home = () => {
       
       <div className="grid grid-cols-2 gap-1 pt-10">
         
-      <div className=" bg-gray-200 rounded-lg p-4" >
+      <div className=" bg-green-200 rounded-lg p-4" >
           <h2 className="text-2xl font-bold mb-2">AC/Heater maintenance</h2>
-          <p style={{ fontSize: '19px' }} className="text-gray-700 leading-normal text-justify font-normal">Performing air filter cleaning or replacement to ensure adequate
-            air circulation and enhance the quality of indoor air.cleaning and removing the dirt, dust, and debris and inspection of the heating system.
-            Clearing clogs or blockages in the condensate drain line to prevent water leakage or damage. 
+          <p style={{ fontSize: '19px' }} className="text-gray-700 leading-normal font-ui-sans-serif text-justify font-normal"><span class="italic">Performing air filter cleaning or replacement to ensure adequate
+            air circulation and enhance the quality of indoor air. Cleaning and removing the dirt, dust, and debris and inspection of the heating system.
+            Clearing clogs or blockages in the condensate drain line to prevent water leakage or damage. </span>
           </p>
       </div>
       <div>
@@ -79,11 +79,11 @@ export const Home = () => {
         
       </div>
         
-      <div className=" bg-gray-200 rounded-lg p-4" >
+      <div className=" bg-green-200 rounded-lg p-4" >
           <h2 className="text-2xl font-bold mb-2">Lawn maintenance</h2>
-          <p style={{ fontSize: '19px' }} className="text-gray-700 leading-normal text-justify font-normal">Regularly cutting the grass to maintain an even height and neat appearance.
+          <p style={{ fontSize: '19px' }} className="text-gray-700 leading-relaxed font-ui-sans-serif text-justify font-normal"><span class="italic">Regularly cutting the grass to maintain an even height and neat appearance.
            Removing weeds from the lawn and applying herbicides or weed control treatments to prevent weed growth.
-           Applying fertilizers to provide essential nutrients to the grass, promoting healthy growth and a lush green appearance.
+           Applying fertilizers to provide essential nutrients to the grass, promoting healthy growth and a lush green appearance.</span>
 
           </p>
           
@@ -97,10 +97,7 @@ export const Home = () => {
       </div>
       
       </div>
-
-
-
-   
+   </div>
       
     );
   };
