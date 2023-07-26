@@ -27,7 +27,7 @@ function Booking() {
   const displayStep = (step) => {
     switch (step) {
       case 1:
-        return <ServiceTime />;
+        return <ServiceTime bookingError = {bookingError} />;
       case 2:
         return <TinkerList bookingDetails = {bookingDetails}/>;
       case 3:
@@ -44,7 +44,7 @@ function Booking() {
     let newStep = currentStep;
 
     if(newStep === 1 || newStep === 0 || newStep === 2 || newStep === 3) {
-      console.log(bookingError.length);
+      console.log(bookingError);
 
     if(Object.keys(bookingError).length === 0)
     {
@@ -61,6 +61,10 @@ function Booking() {
 
   const handleClick = (direction, customerData) => {
 
+    if(customerData.date)
+    {
+      customerData.date = customerData.date.replace(/-/g, "");
+    }
     setBookingDetails(customerData);
   
     if(direction === "Next" || direction === "Confirm")

@@ -1,6 +1,6 @@
 import { useBookingContext } from "../BookingContext";
 
-export default function ServiceTime() {
+export default function ServiceTime({bookingError}) {
     const { customerData, setCustomerData } = useBookingContext();
   
   const handleChange = (e) => {
@@ -16,7 +16,8 @@ export default function ServiceTime() {
             <div className="w-full mx-2 flex-1">
                 <div className="font-bold h-6 mt-3 text-gray-500 text-xs leading-8 uppercase">
                     Service Required <span className="text-red-500 font-bold">*</span>
-
+                    &nbsp; &nbsp; &nbsp;
+                    {bookingError.category && <span className="text-red-500 text-xs mt-1">{bookingError.category}</span>}
                 </div>
                 <div className="bg-white my-2 p-1 flex border border-gray-200 rounded">
                     
@@ -39,7 +40,8 @@ export default function ServiceTime() {
             <div className="w-full mx-2 flex-1">
                 <div className="font-bold h-6 mt-3 text-gray-500 text-xs leading-8 uppercase">
                     Date <span className="text-red-500 font-bold">*</span>
-                
+                    &nbsp; &nbsp; &nbsp;
+                    {bookingError.date && <span className="text-red-500 text-xs mt-1">{bookingError.date}</span>}
                 </div>
                 <div className="bg-white my-2 p-1 flex border border-gray-200 rounded">
                     <input
@@ -55,7 +57,8 @@ export default function ServiceTime() {
             <div className="w-full mx-2 flex-1">
                 <div className="font-bold h-6 mt-3 text-gray-500 text-xs leading-8 uppercase">
                     Time Slot<span className="text-red-500 font-bold">*</span>
-                
+                    &nbsp; &nbsp; &nbsp;
+                    {bookingError.timeSlot && <span className="text-red-500 text-xs mt-1">{bookingError.timeSlot}</span>}
                 </div>
                 <div className="bg-white my-2 p-1 flex border border-gray-200 rounded">
                     
