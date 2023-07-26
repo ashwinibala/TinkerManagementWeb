@@ -10,12 +10,14 @@ import CustomerDetails from "./steps/CustomerDetails";
 import ServiceTime from "./steps/ServiceTime";
 import TinkerList from "./steps/TinkerList";
 import BookingFinal from "./steps/BookingFinal"
+import apiBooking from "../../Services/apiBooking";
 
 function Booking() {
   const [currentStep, setCurrentStep] = useState(0); 
   const [isList, setIsList] = useState(0);
   const [bookingError, setBookingError] = useState({});
   const [bookingDetails, setBookingDetails] = useState([]);
+  const [tinkerList, setTinkerList] = useState([]);
   
   const steps = [
     "Service & Time",
@@ -29,7 +31,7 @@ function Booking() {
       case 1:
         return <ServiceTime bookingError = {bookingError} />;
       case 2:
-        return <TinkerList bookingDetails = {bookingDetails}/>;
+        return <TinkerList tinkerList = {tinkerList}/>;
       case 3:
         return <CustomerDetails />;
       case 4:
@@ -45,6 +47,21 @@ function Booking() {
 
     if(newStep === 1 || newStep === 0 || newStep === 2 || newStep === 3) {
       console.log(bookingError);
+
+      if(newStep === 1){
+        (async () => {
+          try {
+            const Result = await apiBooking(bookingDetails).catch((error) => {
+              console.log(error); // Handle any errors
+            });
+        
+            console.log(Result);
+            setTinkerList(Result);
+          } catch (error) {
+            console.log(error);
+          }
+        })();
+      }
 
     if(Object.keys(bookingError).length === 0)
     {

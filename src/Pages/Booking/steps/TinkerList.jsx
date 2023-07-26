@@ -1,28 +1,15 @@
-import apiBooking from "../../../Services/apiBooking";
-import React, { useState } from "react";
+//import apiBooking from "../../../Services/apiBooking";
+
 import { useBookingContext } from "../BookingContext";
 
-export default function TinkerList({bookingDetails}) {
-const [tinkerList, setTinkerList] = useState([]);
+export default function TinkerList({tinkerList}) {
+
 const { customerData, setCustomerData } = useBookingContext();
 
 
 
-(async () => {
-    try {
-      const Result = await apiBooking(bookingDetails).catch((error) => {
-        console.log(error); // Handle any errors
-      });
-  
-      console.log(Result);
-      setTinkerList(Result);
-    } catch (error) {
-      console.log(error);
-    }
-  })();
-
 const handleClick = (e) => {
-  console.log(bookingDetails + "Ignore this");
+ 
   const { name, value } = e.target;
     setCustomerData({ ...customerData, [name]: value });
 }

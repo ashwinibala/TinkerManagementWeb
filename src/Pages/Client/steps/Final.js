@@ -1,20 +1,14 @@
-import apiService from "../../../Services/apiService";
-import { useState } from "react";
+//import apiService from "../../../Services/apiService";
+//import { useState } from "react";
 
-export default function Final({clientDetails}) {
+export default function Final({status}) {
   const [content, setContent] = useState("Loading");
   const [sContent,setSContent] = useState("");
   const [button, setButton] = useState("");
   
   (async () => {
-    try {
-      const Result = await apiService(clientDetails).catch((error) => {
-        console.log(error); // Handle any errors
-      });
   
-      console.log(Result);
-  
-      if (Result && Result.responseCode === 200) {
+      if (status === "Success") {
         setContent("Congratulations");
         setSContent("Your Account has been created");
         setButton("Sign In");
@@ -23,9 +17,7 @@ export default function Final({clientDetails}) {
         setSContent("There is some error in creating account");
         setButton("Try Again");
       }
-    } catch (error) {
-      console.log(error);
-    }
+   
   })();
   
 
