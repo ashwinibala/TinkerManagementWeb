@@ -1,15 +1,22 @@
-//import apiService from "../../../Services/apiService";
-//import { useState } from "react";
-import { useState } from 'react'
+import { useState } from "react";
+import apiService from "../../../Services/apiService";
 
-export default function Final({status}) {
+export default function Final({clientDetails}) {
   const [content, setContent] = useState("Loading");
   const [sContent,setSContent] = useState("");
   const [button, setButton] = useState("");
-  
+
   (async () => {
-  
-      if (status === "Success") {
+    console.log("async function executed");
+    try {
+      console.log("try inside async function executed");
+      const Result = await apiService(clientDetails).catch((error) => {
+        console.log(error); // Handle any errors
+      });
+
+      console.log(Result);
+
+      if (Result && Result.responseCode === 200) {
         setContent("Congratulations");
         setSContent("Your Account has been created");
         setButton("Sign In");
@@ -18,9 +25,10 @@ export default function Final({status}) {
         setSContent("There is some error in creating account");
         setButton("Try Again");
       }
-   
+    } catch (error) {
+      console.log(error);
+    }
   })();
-  
 
     return (
       <div className="container md:mt-10">

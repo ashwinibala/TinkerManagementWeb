@@ -3,7 +3,7 @@ import Stepper from "./Stepper";
 import StepperControl from "./StepperControl";
 import { UseStepperContextProvider } from "./StepperContext";
 import clientValidation from "./clientValidation";
-import apiService from "../../Services/apiService";
+//import apiService from "../../Services/apiService";
 
 
 import Account from "./steps/Account";
@@ -15,7 +15,7 @@ function AddClient() {
   const [clientError, setClientError] = useState({});
   const [isNext, setIsNext] = useState(0);
   const [clientDetails, setClientDetails] = useState([]);
-  const [status, setStatus] = useState("");
+  //const [status, setStatus] = useState("");
   
   const steps = [
     "Personal Details",
@@ -30,7 +30,7 @@ function AddClient() {
       case 2:
         return <Account clientError = {clientError}/>;
       case 3:
-        return <Final status = {status}/>;
+        return <Final clientDetails = {clientDetails}/>;
       // case 3:
       //   return <Payment />;
         
@@ -50,26 +50,6 @@ function AddClient() {
 
     if(newStep === 1 || newStep === 0 || newStep === 2) {
       console.log(clientError.length);
-
-      if(newStep === 2 && Object.keys(clientError).length === 0){
-        (async () => {
-          try {
-            const Result = await apiService(clientDetails).catch((error) => {
-              console.log(error); // Handle any errors
-            });
-        
-            console.log(Result);
-        
-            if (Result && Result.responseCode === 200) {
-             setStatus("Success");
-            } else {
-             setStatus("Failure");
-            }
-          } catch (error) {
-            console.log(error);
-          }
-        })();
-      }
 
     if(Object.keys(clientError).length === 0)
     {
