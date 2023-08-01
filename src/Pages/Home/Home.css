@@ -1,0 +1,9 @@
+.imageCss {
+    background-position: 50%;
+    background-image: url('./images/housebuilding.jpg');
+    height: 350px;
+}
+
+.headerContainer {
+    max-width: 1200px; /* Adjust the value to your preference */
+  }

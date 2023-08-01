@@ -22,7 +22,7 @@ const handleClick = (e) => {
                 tinkerList.map((item) => (
                 <div key={item.id}>
                     <label className="m-1">
-                    <input type="radio" name="client" value={1} onChange={handleClick}/>
+                    <input type="radio" name="client" value={item.id} onChange={handleClick}/>
                     {item.firstname} {item.lastname}
                     </label>
                 </div>

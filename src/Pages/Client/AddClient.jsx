@@ -4,6 +4,7 @@ import StepperControl from "./StepperControl";
 import { UseStepperContextProvider } from "./StepperContext";
 import clientValidation from "./clientValidation";
 //import apiService from "../../Services/apiService";
+import Header from "../../shared/Header";
 
 
 import Account from "./steps/Account";
@@ -86,7 +87,7 @@ function AddClient() {
   return (
     <UseStepperContextProvider>
     <div className=" justify-center">
-    
+      <Header />
       <div className="mx-auto rounded-2xl bg-white pb-2 shadow-xl md:w-1/2">
         {/* Stepper */}
         <div className="horizontal container mt-5 ">

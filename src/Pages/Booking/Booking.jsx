@@ -4,7 +4,7 @@ import BookingStepper from "./BookingStepper";
 import BookingControl from "./BookingControl";
 import { UseBookingContextProvider } from "./BookingContext";
 import ValidationOne from "./ValidationOne";
-
+import Header from "../../shared/Header";
 
 import CustomerDetails from "./steps/CustomerDetails";
 import ServiceTime from "./steps/ServiceTime";
@@ -103,7 +103,7 @@ function Booking() {
   return (
     <UseBookingContextProvider>
     <div className=" justify-center">
-    
+      <Header />
       <div className="mx-auto rounded-2xl bg-white pb-2 shadow-xl md:w-1/2">
         {/* Stepper */}
         <div className="horizontal container mt-5 ">
