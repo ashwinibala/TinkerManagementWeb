@@ -18,7 +18,7 @@ const handleClick = (e) => {
         <div>
             <h1>Tinker List</h1>
             {bookingError.client && <span className="text-red-500 text-xs font-bold h-6 mt-3 leading-8 uppercase">{bookingError.client}</span>}
-            {Array.isArray(tinkerList) ? (
+            {(Array.isArray(tinkerList) || tinkerList.length !== 0)? (
                 tinkerList.map((item) => (
                 <div key={item.id}>
                     <label className="m-1">
@@ -28,7 +28,7 @@ const handleClick = (e) => {
                 </div>
                 ))
                 ) : (
-                <div>No data available.</div>
+                <div>No tinker available. Please Select another time slot</div>
             )}
         </div>
     )
