@@ -44,6 +44,13 @@ const Header = () => {
           Tinker Services
         </h1>
 
+        {/* <img
+            className="block h-12 w-auto cursor-pointer"
+            src="../Pages/Home/images/logo-png.png"
+            alt="Tinker Services Logo"
+          /> */}
+
+
         {/* Navigation links */}
         <div
           className="!visible hidden grow basis-[100%] items-center lg:!flex lg:basis-auto"
