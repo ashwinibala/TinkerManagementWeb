@@ -1,8 +1,9 @@
 
 async function apiTinkerList(customerData) {
 
+  const date = customerData.date.replace(/-/g, "");
     try {
-        const url = `http://localhost:8080/clientavailability/${customerData.category}/${customerData.date}/${customerData.timeSlot}`;
+        const url = `http://localhost:8080/clientavailability/${customerData.category}/${date}/${customerData.timeSlot}`;
         console.log(url);
         const response = await fetch(url, {
        method: 'GET',

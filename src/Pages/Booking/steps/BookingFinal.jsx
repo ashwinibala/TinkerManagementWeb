@@ -26,7 +26,7 @@ export default function BookingFinal() {
           setButton("Home");
         } else {
           setContent("Please Try Again Later");
-          setSContent("There is some error in booking the appointment");
+          setSContent("There is some error in booking the appointment"); 
           setButton("Try Again");
         }
       } catch (error) {

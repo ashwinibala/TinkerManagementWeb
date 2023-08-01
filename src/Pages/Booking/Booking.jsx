@@ -80,10 +80,7 @@ function Booking() {
 
   const handleClick = (direction, customerData) => {
 
-    if(customerData.date)
-    {
-      customerData.date = customerData.date.replace(/-/g, "");
-    }
+   
     setBookingDetails(customerData);
   
     if(direction === "Next" || direction === "Confirm")
