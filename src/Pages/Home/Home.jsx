@@ -11,7 +11,7 @@ export const Home = () => {
 
         
         <p style={{ fontSize: '17px' }} className="text-base text-gray-700 leading-relaxed font-ui-sans-serif text-center pt-5">
-        <span class="italic">Our mission is to provide homeowners with top-notch maintenance services to keep your home running smoothly and efficiently.</span></p></div>
+        <span className="italic">Our mission is to provide homeowners with top-notch maintenance services to keep your home running smoothly and efficiently.</span></p></div>
       
       {/* Services */}
 
@@ -24,7 +24,7 @@ export const Home = () => {
       <div className=" bg-green-200 rounded-lg p-4">
           
       <h2 className="text-2xl font-bold mb-2">Electrician</h2>
-            <p style={{ fontSize: '19px' }} className="text-gray-700 leading-normal font-ui-sans-serif text-justify font-normal"><span class="italic">Installing electrical wiring, circuits, and components in new construction or during renovations.
+            <p style={{ fontSize: '19px' }} className="text-gray-700 leading-normal font-ui-sans-serif text-justify font-normal"><span className="italic">Installing electrical wiring, circuits, and components in new construction or during renovations.
               Identifying and resolving electrical problems, including but not limited to power interruptions,
               defective wiring, malfunctioning electrical outlets or switches, and issues with circuit breakers and lighting systems.</span>
             </p>
@@ -44,7 +44,7 @@ export const Home = () => {
         
        <div className=" bg-green-200 rounded-lg p-4" >
           <h2 className="text-2xl font-bold mb-2">Plumbing</h2>
-          <p style={{ fontSize: '19px' }} className="text-gray-700 leading-normal font-ui-sans-serif text-justify font-normal"><span class="italic">Installing and repairing pipes for water supply, drainage, and sewage systems.
+          <p style={{ fontSize: '19px' }} className="text-gray-700 leading-normal font-ui-sans-serif text-justify font-normal"><span className="italic">Installing and repairing pipes for water supply, drainage, and sewage systems.
             Identifying and repairing leaks in all plumbing components. Performing drain cleaning by utilizing different methods such as snaking, hydro-jetting,
             or chemical drain cleaners to unclog and clear obstructed drains and pipes.</span>
           </p>
@@ -58,7 +58,7 @@ export const Home = () => {
         
       <div className=" bg-green-200 rounded-lg p-4" >
           <h2 className="text-2xl font-bold mb-2">AC/Heater maintenance</h2>
-          <p style={{ fontSize: '19px' }} className="text-gray-700 leading-normal font-ui-sans-serif text-justify font-normal"><span class="italic">Performing air filter cleaning or replacement to ensure adequate
+          <p style={{ fontSize: '19px' }} className="text-gray-700 leading-normal font-ui-sans-serif text-justify font-normal"><span className="italic">Performing air filter cleaning or replacement to ensure adequate
             air circulation and enhance the quality of indoor air. Cleaning and removing the dirt, dust, and debris and inspection of the heating system.
             Clearing clogs or blockages in the condensate drain line to prevent water leakage or damage. </span>
           </p>
@@ -81,7 +81,7 @@ export const Home = () => {
         
       <div className=" bg-green-200 rounded-lg p-4" >
           <h2 className="text-2xl font-bold mb-2">Lawn maintenance</h2>
-          <p style={{ fontSize: '19px' }} className="text-gray-700 leading-relaxed font-ui-sans-serif text-justify font-normal"><span class="italic">Regularly cutting the grass to maintain an even height and neat appearance.
+          <p style={{ fontSize: '19px' }} className="text-gray-700 leading-relaxed font-ui-sans-serif text-justify font-normal"><span className="italic">Regularly cutting the grass to maintain an even height and neat appearance.
            Removing weeds from the lawn and applying herbicides or weed control treatments to prevent weed growth.
            Applying fertilizers to provide essential nutrients to the grass, promoting healthy growth and a lush green appearance.</span>
 

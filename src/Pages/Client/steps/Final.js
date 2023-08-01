@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import apiService from "../../../Services/apiService";
 
 export default function Final({clientDetails}) {
@@ -6,6 +6,7 @@ export default function Final({clientDetails}) {
   const [sContent,setSContent] = useState("");
   const [button, setButton] = useState("");
 
+  useEffect(() => {
   (async () => {
     console.log("async function executed");
     try {
@@ -29,6 +30,7 @@ export default function Final({clientDetails}) {
       console.log(error);
     }
   })();
+}, []);
 
     return (
       <div className="container md:mt-10">
@@ -60,9 +62,9 @@ export default function Final({clientDetails}) {
           <div className="text-lg font-semibold text-gray-500">
             {sContent}
           </div>
-          <a className="mt-10" href="/user/dashboard">
+          <a className="mt-10" href="/">
             <button className="h-10 px-5 text-green-700 transition-colors duration-150 border border-gray-300 rounded-lg focus:shadow-outline hover:bg-green-500 hover:text-green-100">
-              <a href="/">{button}</a>
+              {button}
             </button>
           </a>
         </div>

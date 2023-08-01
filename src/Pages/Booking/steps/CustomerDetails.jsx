@@ -1,7 +1,7 @@
 import { useBookingContext } from "../BookingContext";
 //import { useEffect } from 'react';
 
-export default function CustomerDetails() {
+export default function CustomerDetails({bookingError}) {
   const { customerData, setCustomerData } = useBookingContext();
   
   const handleChange = (e) => {
@@ -22,7 +22,7 @@ export default function CustomerDetails() {
         <div className="font-bold h-6 mt-3 text-gray-500 text-xs leading-8 uppercase">
           First Name <span className="text-red-500 font-bold">*</span>
           &nbsp; &nbsp; &nbsp;
-          
+          {bookingError.firstName && <span className="text-red-500 text-xs mt-1">{bookingError.firstName}</span>}
         </div>
         <div className="bg-white my-2 p-1 flex border border-gray-200 rounded">
           <input
@@ -39,7 +39,7 @@ export default function CustomerDetails() {
         <div className="font-bold h-6 mt-3 text-gray-500 text-xs leading-8 uppercase">
           Last Name <span className="text-red-500 font-bold">*</span>
           &nbsp; &nbsp; &nbsp;
-
+          {bookingError.lastName && <span className="text-red-500 text-xs mt-1">{bookingError.lastName}</span>}
         </div>
         <div className="bg-white my-2 p-1 flex border border-gray-200 rounded">
           <input
@@ -56,7 +56,7 @@ export default function CustomerDetails() {
         <div className="font-bold h-6 mt-3 text-gray-500 text-xs leading-8 uppercase">
           Email <span className="text-red-500 font-bold">*</span>
           &nbsp; &nbsp; &nbsp;
-
+          {bookingError.email && <span className="text-red-500 text-xs mt-1">{bookingError.email}</span>}
         </div>
         <div className="bg-white my-2 p-1 flex border border-gray-200 rounded">
           <input
@@ -73,7 +73,7 @@ export default function CustomerDetails() {
         <div className="font-bold h-6 mt-3 text-gray-500 text-xs leading-8 uppercase">
           Phone <span className="text-red-500 font-bold">*</span>
           &nbsp; &nbsp; &nbsp;
-
+          {bookingError.phone && <span className="text-red-500 text-xs mt-1">{bookingError.phone}</span>}
         </div>
         <div className="bg-white my-2 p-1 flex border border-gray-200 rounded">
           <input
@@ -90,7 +90,7 @@ export default function CustomerDetails() {
         <div className="font-bold h-6 mt-3 text-gray-500 text-xs leading-8 uppercase">
           Address <span className="text-red-500 font-bold">*</span>
           &nbsp; &nbsp; &nbsp;
-
+          {bookingError.address && <span className="text-red-500 text-xs mt-1">{bookingError.address}</span>}
         </div>
         <div className="bg-white my-2 p-1 flex border border-gray-200 rounded">
           <input
@@ -106,7 +106,7 @@ export default function CustomerDetails() {
         <div className="font-bold h-6 mt-3 text-gray-500 text-xs leading-8 uppercase">
           Postal Code <span className="text-red-500 font-bold">*</span>
           &nbsp; &nbsp; &nbsp;
-
+          {bookingError.postalCode && <span className="text-red-500 text-xs mt-1">{bookingError.postalCode}</span>}
         </div>
         <div className="bg-white my-2 p-1 flex border border-gray-200 rounded">
           <input
@@ -123,7 +123,7 @@ export default function CustomerDetails() {
         <div className="font-bold h-6 mt-3 text-gray-500 text-xs leading-8 uppercase">
           Issue/Requirement Description <span className="text-red-500 font-bold">*</span>
           &nbsp; &nbsp; &nbsp;
-
+          {bookingError.description && <span className="text-red-500 text-xs mt-1">{bookingError.description}</span>}
         </div>
         <div className="bg-white my-2 p-1 flex border border-gray-200 rounded">
           <textarea

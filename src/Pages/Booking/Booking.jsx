@@ -33,7 +33,7 @@ function Booking() {
       case 2:
         return <TinkerList tinkerList = {tinkerList}/>;
       case 3:
-        return <CustomerDetails />;
+        return <CustomerDetails bookingError = {bookingError}/>;
       case 4:
         return <BookingFinal />;
       

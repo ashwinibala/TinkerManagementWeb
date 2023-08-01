@@ -17,18 +17,18 @@ const handleClick = (e) => {
     return(
         <div>
             <h1>Tinker List</h1>
-            <div>
-                
-                  {tinkerList.map((item) => (
-                    <div> 
-                     <label >
-                      <input type="radio" name="client" value={1} onChange={handleClick} key={item.id}></input>
-                      {item.firstname}{item.lastname}
-                     </label>
-                     </div>
-                  ))}
-                
-            </div>
+            {Array.isArray(tinkerList) ? (
+                tinkerList.map((item) => (
+                <div key={item.clientId}>
+                    <label className="m-1">
+                    <input type="radio" name="client" value={item.clientId} onChange={handleClick}/>
+                    {item.firstname} {item.lastname}
+                    </label>
+                </div>
+                ))
+                ) : (
+                <div>No data available.</div>
+            )}
         </div>
     )
 }
