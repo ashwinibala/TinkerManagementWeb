@@ -18,7 +18,7 @@ const handleClick = (e) => {
         <div>
             <h1>Tinker List</h1>
             {bookingError.client && <span className="text-red-500 text-xs font-bold h-6 mt-3 leading-8 uppercase">{bookingError.client}</span>}
-            {(Array.isArray(tinkerList) || tinkerList.length !== 0)? (
+            {(Array.isArray(tinkerList) && tinkerList.length !== 0)? (
                 tinkerList.map((item) => (
                 <div key={item.id}>
                     <label className="m-1">

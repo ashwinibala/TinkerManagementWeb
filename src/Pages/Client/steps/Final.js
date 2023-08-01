@@ -56,14 +56,14 @@ export default function Final({clientDetails}) {
             </svg>
           </div>
   
-          <div className="mt-3 text-xl font-semibold uppercase text-green-500">
+          <div className="mt-3 text-xl font-semibold uppercase text-blue-500">
             {content}
           </div>
           <div className="text-lg font-semibold text-gray-500">
             {sContent}
           </div>
           <a className="mt-10" href="/">
-            <button className="h-10 px-5 text-green-700 transition-colors duration-150 border border-gray-300 rounded-lg focus:shadow-outline hover:bg-green-500 hover:text-green-100">
+            <button className="h-10 px-5 text-blue-700 transition-colors duration-150 border border-gray-300 rounded-lg focus:shadow-outline hover:bg-blue-500 hover:text-blue-100">
               {button}
             </button>
           </a>

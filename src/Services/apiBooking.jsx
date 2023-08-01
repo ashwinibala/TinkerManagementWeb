@@ -12,16 +12,16 @@ async function apiBooking(customerData) {
        body: JSON.stringify({
          categoryId: customerData.category,
          date: customerData.date,
-         timeSlot: customerData.timeSlot,
+         timeslotId: customerData.timeSlot,
          clientId: customerData.client,
+         description: customerData.description,
          customer: {
-            firstName: customerData.firstName,
-            lastName: customerData.lastName,
+            firstname: customerData.firstName,
+            lastname: customerData.lastName,
             email: customerData.email,
             phone: customerData.phone,
             address: customerData.address,
-            postalCode: customerData.postalCode,
-            description: customerData.description
+            postalcode: customerData.postalCode
           }
 
        })

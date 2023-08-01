@@ -4,7 +4,7 @@ import "./Home.css";
 const HomeHeader = () => {
   return (
     
-    <div className="headerContainer">
+    <div>
             
             {/* <!-- Navigation bar --> */}
             <nav

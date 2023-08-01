@@ -5,10 +5,10 @@ export const Home = () => {
   return (
       <div> 
         <HomeHeader />
-          <div className="bg-green-50">
-            <div className="text-3xl text-green-900 font-bold">
+          <div className="bg-gray-50">
+            <div className="text-3xl text-gray-900 font-bold">
             
-            <div className="bg-green-200 rounded-lg p-4">
+            <div className="bg-gray-200 rounded-lg p-4">
               <h2 style={{ fontSize: '40px' }} className="text-center">Welcome to Tinker!</h2>
 
               
@@ -23,7 +23,7 @@ export const Home = () => {
             
             <div className="grid grid-cols-2 gap-1 pt-10 " >
               
-            <div className=" bg-green-200 rounded-lg p-4">
+            <div className=" bg-gray-200 rounded-lg p-4">
                 
             <h2 className="text-2xl font-bold mb-2">Electrician</h2>
                   <p style={{ fontSize: '19px' }} className="text-gray-700 leading-normal font-ui-sans-serif text-justify font-normal"><span className="italic">Installing electrical wiring, circuits, and components in new construction or during renovations.
@@ -44,7 +44,7 @@ export const Home = () => {
                 <img src={require('./images/plumbing.jpg')} alt="Plumbing" className="w-64  h-64 rounded-lg shadow-lg ml-auto"/>
               </div>
               
-            <div className=" bg-green-200 rounded-lg p-4" >
+            <div className=" bg-gray-200 rounded-lg p-4" >
                 <h2 className="text-2xl font-bold mb-2">Plumbing</h2>
                 <p style={{ fontSize: '19px' }} className="text-gray-700 leading-normal font-ui-sans-serif text-justify font-normal"><span className="italic">Installing and repairing pipes for water supply, drainage, and sewage systems.
                   Identifying and repairing leaks in all plumbing components. Performing drain cleaning by utilizing different methods such as snaking, hydro-jetting,
@@ -58,7 +58,7 @@ export const Home = () => {
             
             <div className="grid grid-cols-2 gap-1 pt-10">
               
-            <div className=" bg-green-200 rounded-lg p-4" >
+            <div className=" bg-gray-200 rounded-lg p-4" >
                 <h2 className="text-2xl font-bold mb-2">AC/Heater maintenance</h2>
                 <p style={{ fontSize: '19px' }} className="text-gray-700 leading-normal font-ui-sans-serif text-justify font-normal"><span className="italic">Performing air filter cleaning or replacement to ensure adequate
                   air circulation and enhance the quality of indoor air. Cleaning and removing the dirt, dust, and debris and inspection of the heating system.
@@ -81,11 +81,11 @@ export const Home = () => {
               
             </div>
               
-            <div className=" bg-green-200 rounded-lg p-4" >
+            <div className=" bg-gray-200 rounded-lg p-4" >
                 <h2 className="text-2xl font-bold mb-2">Lawn maintenance</h2>
                 <p style={{ fontSize: '19px' }} className="text-gray-700 leading-relaxed font-ui-sans-serif text-justify font-normal"><span className="italic">Regularly cutting the grass to maintain an even height and neat appearance.
                 Removing weeds from the lawn and applying herbicides or weed control treatments to prevent weed growth.
-                Applying fertilizers to provide essential nutrients to the grass, promoting healthy growth and a lush green appearance.</span>
+                Applying fertilizers to provide essential nutrients to the grass, promoting healthy growth and a lush gray appearance.</span>
 
                 </p>
                 
