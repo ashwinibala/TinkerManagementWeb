@@ -17,7 +17,7 @@ async function apiService(clientDetails) {
       email: clientDetails.email,
       phone: clientDetails.phone,
       address: clientDetails.address,
-      categoryId: 1
+      categoryId: clientDetails.category
     })
   });
 

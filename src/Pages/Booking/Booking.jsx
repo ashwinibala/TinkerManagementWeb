@@ -10,7 +10,7 @@ import CustomerDetails from "./steps/CustomerDetails";
 import ServiceTime from "./steps/ServiceTime";
 import TinkerList from "./steps/TinkerList";
 import BookingFinal from "./steps/BookingFinal"
-import apiBooking from "../../Services/apiBooking";
+import apiTinkerList from "../../Services/apiTinkerList";
 
 function Booking() {
   const [currentStep, setCurrentStep] = useState(0); 
@@ -51,7 +51,7 @@ function Booking() {
       if(newStep === 1){
         (async () => {
           try {
-            const Result = await apiBooking(bookingDetails).catch((error) => {
+            const Result = await apiTinkerList(bookingDetails).catch((error) => {
               console.log(error); // Handle any errors
             });
             const List = Result.response;

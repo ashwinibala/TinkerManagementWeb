@@ -20,9 +20,9 @@ const handleClick = (e) => {
             {bookingError.client && <span className="text-red-500 text-xs font-bold h-6 mt-3 leading-8 uppercase">{bookingError.client}</span>}
             {Array.isArray(tinkerList) ? (
                 tinkerList.map((item) => (
-                <div key={item.clientId}>
+                <div key={item.id}>
                     <label className="m-1">
-                    <input type="radio" name="client" value={1} onChange={handleClick} key={item.id}/>
+                    <input type="radio" name="client" value={1} onChange={handleClick}/>
                     {item.firstname} {item.lastname}
                     </label>
                 </div>
