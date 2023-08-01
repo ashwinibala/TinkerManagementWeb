@@ -34,13 +34,13 @@ const ValidationOne = (customerData,currentStep) => {
         } 
        
     }
-    // if(currentStep === 2)
-    // {
-    //     if((!customerData.hasOwnProperty("client")) || customerData.client === "")
-    //     {
-    //         error.firstName = "Please select a Tinker";
-    //     }
-    // }
+    if(currentStep === 2)
+    {
+        if((!customerData.hasOwnProperty("client")) || customerData.client === "")
+        {
+            error.client = "Please select a Tinker";
+        }
+    }
 
     if(currentStep === 3)
     {
@@ -82,7 +82,7 @@ const ValidationOne = (customerData,currentStep) => {
         }
         if((!customerData.hasOwnProperty("description")) || customerData.description === "")
         {
-            error.description = "Postal Code is mandatory";  
+            error.description = "Please provide details of your Issue/ Requirement";
         }
     }
     

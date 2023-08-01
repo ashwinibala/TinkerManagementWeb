@@ -31,7 +31,7 @@ function Booking() {
       case 1:
         return <ServiceTime bookingError = {bookingError} />;
       case 2:
-        return <TinkerList tinkerList = {tinkerList}/>;
+        return <TinkerList tinkerList = {tinkerList} bookingError = {bookingError}/>;
       case 3:
         return <CustomerDetails bookingError = {bookingError}/>;
       case 4:
@@ -54,15 +54,17 @@ function Booking() {
             const Result = await apiBooking(bookingDetails).catch((error) => {
               console.log(error); // Handle any errors
             });
-        
+            const List = Result.response;
             console.log(Result);
-            setTinkerList(Result);
+            console.log(List);
+
+            setTinkerList(List);
           } catch (error) {
             console.log(error);
           }
         })();
       }
-
+    console.log(bookingError)
     if(Object.keys(bookingError).length === 0)
     {
       newStep++;
