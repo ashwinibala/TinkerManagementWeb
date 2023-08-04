@@ -21,8 +21,8 @@ const handleClick = (e) => {
             {(Array.isArray(tinkerList) && tinkerList.length !== 0)? (
                 tinkerList.map((item) => (
                 <div key={item.id}>
-                    <label className="m-1">
-                    <input type="radio" name="client" value={item.id} onChange={handleClick}/>
+                    <label className="ml-1">
+                    <input className="mr-4" type="radio" name="client" value={item.id} onChange={handleClick}/>
                     {item.firstname} {item.lastname}
                     </label>
                 </div>

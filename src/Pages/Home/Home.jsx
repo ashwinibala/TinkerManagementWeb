@@ -8,7 +8,7 @@ export const Home = () => {
           <div className="bg-gray-50">
             <div className="text-3xl text-gray-900 font-bold">
             
-            <div className="bg-gray-200 rounded-lg p-4">
+            <div className="bg-gray-50 rounded-lg p-4">
               <h2 style={{ fontSize: '40px' }} className="text-center">Welcome to Tinker!</h2>
 
               

@@ -19,7 +19,7 @@ export default function BookingFinal() {
         });
   
         console.log(Result);
-  
+
         if (Result && Result.responseCode === 200) {
           setContent("Congratulations");
           setSContent("Your Appointment has been confirmed");

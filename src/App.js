@@ -2,9 +2,11 @@ import "./App.css"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //import { Header } from "./shared/Header1";
 import { Footer } from "./shared/Footer";
-import { Home } from "./Pages/Home/Home";
+import { Home } from "./Pages/Home/Home2";
 import  AddClient  from "./Pages/Client/AddClient.jsx";
 import Booking from "./Pages/Booking/Booking.jsx";
+import LoginPage from "./Pages/Login/loginPage.jsx";
+import Dashboard from "./Pages/Dashboard/Dashboard";
 function App() {
   return (
     <div className="App">
@@ -15,6 +17,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/clientRegistration" element={<AddClient />} />
             <Route path="/booking" element={<Booking />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
           <Footer />
         </Router>
