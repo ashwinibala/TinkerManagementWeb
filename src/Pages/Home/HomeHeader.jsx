@@ -11,13 +11,13 @@ const HomeHeader = () => {
             
             {/* <!-- Navigation bar --> */}
             <nav
-                className="relative flex w-full items-center justify-between bg-white py-2 text-neutral-600 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 dark:text-neutral-200 md:flex-wrap md:justify-start"
+                className="relative flex w-full items-center justify-between bg-white py-2 text-neutral-600 shadow-lg hover:text-neutral-700 focus:text-neutral-700  md:flex-wrap md:justify-start"
                 data-te-navbar-ref>
                 <div className="flex w-full flex-wrap items-center justify-between px-3">
                 <div className="flex items-center">
                     {/* <!-- Hamburger menu button --> */}
                     <button
-                    className="border-0 bg-transparent px-2 text-xl leading-none transition-shadow duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 dark:hover:text-white dark:focus:text-white lg:hidden"
+                    className="border-0 bg-transparent px-2 text-xl leading-none transition-shadow duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700  lg:hidden"
                     type="button"
                     data-te-collapse-init
                     data-te-target="#navbarSupportedContentX"
@@ -52,7 +52,7 @@ const HomeHeader = () => {
                     data-te-navbar-nav-ref>
                     <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
                         <a
-                        className="headerLink block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
+                        className="headerLink block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30  lg:p-2 [&.active]:text-black/90"
                         href="/"
                         data-te-nav-link-ref
                         data-te-ripple-init
@@ -66,7 +66,7 @@ const HomeHeader = () => {
                    
                     <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
                         <a
-                        className="headerLink block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
+                        className="headerLink block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30  lg:p-2 [&.active]:text-black/90"
                         href="/booking"
                         data-te-nav-link-ref
                         data-te-ripple-init
@@ -78,7 +78,7 @@ const HomeHeader = () => {
                     <ul className="ml-auto flex flex-col lg:flex-row" data-te-navbar-nav-ref>
                     {/* <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
                         <a
-                        className="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
+                        className="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30  lg:p-2 [&.active]:text-black/90"
                         href="/clientRegistration"
                         data-te-nav-link-ref
                         data-te-ripple-init
@@ -88,7 +88,7 @@ const HomeHeader = () => {
                         <li className="mb-4 lg:mb-2 lg:pr-2" data-te-nav-item-ref>
                             Are you a Tinker? 
                         <a
-                            className="loginButton block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-1 mt-2 pl-2[&.active]:text-black/90"
+                            className="loginButton block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30  lg:p-1 mt-2 pl-2[&.active]:text-black/90"
                             href="/login"
                             data-te-nav-link-ref
                             data-te-ripple-init
@@ -116,7 +116,7 @@ const HomeHeader = () => {
                     <h3 className="mb-8 text-3xl font-bold">Your Trusted Handyman for Every Task!!!</h3>
                     {/* <button
                         type="button"
-                        className="inline-block rounded border-2 border-neutral-50 px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                        className="inline-block rounded border-2 border-neutral-50 px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 "
                         data-te-ripple-init
                         data-te-ripple-color="light">
                         Get started

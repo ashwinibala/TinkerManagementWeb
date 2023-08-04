@@ -4,7 +4,7 @@ console.log("api login executed");
 console.log(loginCred);
     try {
      const response = await fetch(`http://localhost:8080/client/login`, {
-       method: 'POST',
+       method: 'GET',
        headers: {
          'Accept': 'application/json',
          'Content-Type': 'application/json',
