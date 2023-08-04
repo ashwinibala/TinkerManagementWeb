@@ -3,6 +3,7 @@ import Header from "../../shared/Header"
 import logo from "../Home/images/logo.png"
 import apiLogin from "../../Services/apiLogin";
 import { useNavigate } from "react-router-dom";
+import {useBookingContext}  from "../Booking/BookingContext";
 import {
   Ripple,
   initTE,
@@ -11,9 +12,8 @@ import {
 export default function LoginPage() {
   const [loginCred, setLoginCred] = useState("");
   const [error, setError] = useState("");
-  const [bookings, setBookings] = useState("");
   const navigate = useNavigate();
-
+  const [ setBookingData] = useBookingContext();
   initTE({ Ripple });
 
 const handleChange = (e) => {
@@ -33,8 +33,8 @@ const handleClick = async () => {
     console.log(Result);
 
     if (Result && Result.responseCode === 200) {
-      setBookings(Result.response);
-      navigate('/dashboard', { state: bookings });
+      setBookingData(Result.response);
+      navigate('/dashboard');
     } else {
       setError("Invalid username or password");
     }

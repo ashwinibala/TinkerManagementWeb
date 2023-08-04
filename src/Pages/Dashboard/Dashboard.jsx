@@ -1,11 +1,10 @@
 import React from 'react';
 import DashboardHeader from "./DashboardHeader";
-import { useLocation } from 'react-router-dom';
+import {useBookingContext} from "../Booking/BookingContext";
 
 const Dashboard = () => {
-    const location = useLocation();
-    const receivedData = location.state;
-    console.log(receivedData);
+    const [bookingData] = useBookingContext();
+    console.log(bookingData);
   return (
     <div>
         <DashboardHeader />

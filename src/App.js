@@ -5,7 +5,7 @@ import { Footer } from "./shared/Footer";
 import { Home } from "./Pages/Home/Home2";
 import  AddClient  from "./Pages/Client/AddClient.jsx";
 import Booking from "./Pages/Booking/Booking.jsx";
-import LoginPage from "./Pages/Login/loginPage.jsx";
+import LoginPage from "./Pages/Dashboard/loginPage.jsx";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 function App() {
   return (
