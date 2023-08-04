@@ -3,18 +3,13 @@ async function apiLogin(loginCred) {
 console.log("api login executed");
 console.log(loginCred);
     try {
-     const response = await fetch(`http://localhost:8080/client/login`, {
+     const response = await fetch(`http://localhost:8080/client/login/${loginCred.username}/${loginCred.password}`, {
        method: 'GET',
        headers: {
          'Accept': 'application/json',
          'Content-Type': 'application/json',
          'Access-Control-Allow-Origin': 'http://localhost:3000'
-       },
-       body: JSON.stringify({
-         username: loginCred.username,
-         password: loginCred.password,
-        
-       })
+       }
      });
    
      const data = await response.json();
