@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75be1737-a849-484e-adbe-0370208e29a0" name="Changes" comment="Connecting frontend and backend changes">
-      <change afterPath="$PROJECT_DIR$/src/Pages/Dashboard/DataContextProvider.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Dashboard/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Dashboard/Dashboard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Dashboard/IndvBooking.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Dashboard/DataContext.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Login/loginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Dashboard/loginPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Dashboard/loginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Dashboard/loginPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +61,9 @@
       <workItem from="1690923433808" duration="3262000" />
       <workItem from="1691002545968" duration="25000" />
       <workItem from="1691009484816" duration="6568000" />
+      <workItem from="1691189062548" duration="202000" />
+      <workItem from="1691189280537" duration="174000" />
+      <workItem from="1691189479379" duration="2722000" />
     </task>
     <task id="LOCAL-00001" summary="Tinker List">
       <option name="closed" value="true" />
