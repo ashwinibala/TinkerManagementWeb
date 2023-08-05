@@ -1,25 +1,30 @@
-import React from 'react';
+import React, {useState} from 'react';
 import DashboardHeader from "./DashboardHeader";
 import { useLocation } from "react-router-dom";
 import {
   Card,
+  Button,
   Typography,
   CardBody
 } from "@material-tailwind/react";
+import Details from "./Details";
 
 const Dashboard = () => {
-
-    const location = useLocation();
+  const [showCard, setShowCard] = useState(false);
+  const [selectedAppointment, setSelectedAppointment] = useState(null);
+  const location = useLocation();
   const userData = location.state?.userData;
   console.log(userData);
   const TIME_SLOT = [{1: "8:00am - 10.00am", 2: "10.00am - 12.00pm", 3: "12.00pm - 2.00pm", 4: "2.00pm - 4.00pm"}];
+
+  const client = userData.client;
 
 const getTimeSlotString = (id) => {
     const slot = TIME_SLOT[0][id];
     return slot ? slot : "N/A"; // Return "N/A" if the ID is not found in the TIME_SLOT array
   }; 
 
-const TABLE_HEAD = ["Date", "Time", "Name", "Phone", "Email"];
+const TABLE_HEAD = ["Date", "Time", "Name", "Phone", "Email", "Details"];
 
 const sortedAppointments = userData.appointments.slice().sort((a, b) => {
   const dateA = new Date(a.date);
@@ -32,7 +37,7 @@ const TABLE_ROWS = sortedAppointments;
     <div>
         <DashboardHeader />
         <div className="bg-gray-50 rounded-lg p-4">
-            <h2 style={{ fontSize: '40px' }} className="text-center" >Welcome !</h2>
+            <h2 style={{ fontSize: '40px' }} className="text-center" >Welcome {client.firstname} {client.lastname}!</h2>
             <p style={{ fontSize: '17px' }} className="text-base text-gray-700 leading-relaxed font-ui-sans-serif text-center pt-5" >
             <span className="italic">Here are your Appointments</span></p>
             
@@ -59,41 +64,51 @@ const TABLE_ROWS = sortedAppointments;
             </tr>
           </thead>
           <tbody>
-            {TABLE_ROWS.map(({ date, timeslotid, customer}, index) => {
+            {TABLE_ROWS.map((item, index) => {
               const isLast = index === TABLE_ROWS.length - 1;
               const classes = isLast ? "p-4" : "p-4 border-b border-blue-gray-50";
  
               return (
-                <tr key={customer.id}>
+                <tr key={item.customer.id}>
                   <td className={classes}>
-                      <div className="flex flex-col">
+                      
                         <Typography variant="small" color="blue-gray" className="font-normal">
-                         {date}
+                         {item.date}
                         </Typography>
-                    </div>
+                  
                   </td>
                   <td className={classes}>
-                    <div className="flex flex-col">
+                    
                       <Typography variant="small" color="blue-gray" className="font-normal">
-                      {getTimeSlotString(timeslotid)}
+                      {getTimeSlotString(item.timeslotid)}
                       </Typography>
-                    </div>
+                   
                   </td>
                   
                   <td className={classes}>
                     <Typography variant="small" color="blue-gray" className="font-normal">
-                    {customer.firstname} {customer.lastname}
+                    {item.customer.firstname} {item.customer.lastname}
                     </Typography>
                   </td>
 
                   <td className={classes}>
                     <Typography variant="small" color="blue-gray" className="font-normal">
-                    {customer.phone}
+                    {item.customer.phone}
                     </Typography>
                   </td>
                   <td className={classes}>
                     <Typography variant="small" color="blue-gray" className="font-normal">
-                    {customer.email}
+                    {item.customer.email}
+                    </Typography>
+                  </td>
+                  <td className={classes}>
+                    <Typography variant="small" color="blue-gray" className="font-normal">
+                    <Button variant="outlined" color="blue-gray" size="sm" onClick={() => {
+                      setSelectedAppointment(item); 
+                      setShowCard(true); 
+                      }}>
+                        Details
+                      </Button>
                     </Typography>
                   </td>
                 </tr>
@@ -117,9 +132,14 @@ const TABLE_ROWS = sortedAppointments;
       </CardFooter> */}
     </Card>
 
-            </div>
+    </div>
 
-
+    {showCard && (
+  <Details
+    Details={selectedAppointment}
+    onClose={() => setShowCard(false)}
+  />
+)}
     </div>
   );
 };
