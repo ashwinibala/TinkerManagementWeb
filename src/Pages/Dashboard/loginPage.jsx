@@ -33,8 +33,8 @@ const handleClick = async () => {
     console.log(Result);
 
     if (Result && Result.responseCode === 200) {
-      setBookingData(Result.response);
-      navigate('/dashboard');
+      const userDataString = encodeURIComponent(JSON.stringify(Result.response));
+      navigate(`/dashboard/?userData=${userDataString}`);
     } else {
       setError("Invalid username or password");
     }
