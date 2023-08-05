@@ -1,19 +1,22 @@
+import { useState, useEffect } from "react";
 import apiService from "../../../Services/apiService";
-import { useState } from "react";
 
 export default function Final({clientDetails}) {
   const [content, setContent] = useState("Loading");
   const [sContent,setSContent] = useState("");
   const [button, setButton] = useState("");
-  
+
+  useEffect(() => {
   (async () => {
+    console.log("async function executed");
     try {
+      console.log("try inside async function executed");
       const Result = await apiService(clientDetails).catch((error) => {
         console.log(error); // Handle any errors
       });
-  
+
       console.log(Result);
-  
+
       if (Result && Result.responseCode === 200) {
         setContent("Congratulations");
         setSContent("Your Account has been created");
@@ -27,7 +30,7 @@ export default function Final({clientDetails}) {
       console.log(error);
     }
   })();
-  
+}, []);
 
     return (
       <div className="container md:mt-10">
@@ -53,15 +56,15 @@ export default function Final({clientDetails}) {
             </svg>
           </div>
   
-          <div className="mt-3 text-xl font-semibold uppercase text-green-500">
+          <div className="mt-3 text-xl font-semibold uppercase text-blue-500">
             {content}
           </div>
           <div className="text-lg font-semibold text-gray-500">
             {sContent}
           </div>
-          <a className="mt-10" href="/user/dashboard">
-            <button className="h-10 px-5 text-green-700 transition-colors duration-150 border border-gray-300 rounded-lg focus:shadow-outline hover:bg-green-500 hover:text-green-100">
-              <a href="/">{button}</a>
+          <a className="mt-10" href="/">
+            <button className="h-10 px-5 text-blue-700 transition-colors duration-150 border border-gray-300 rounded-lg focus:shadow-outline hover:bg-blue-500 hover:text-blue-100">
+              {button}
             </button>
           </a>
         </div>

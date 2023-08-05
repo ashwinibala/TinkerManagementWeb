@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="75be1737-a849-484e-adbe-0370208e29a0" name="Changes" comment="Connecting frontend and backend changes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Dashboard/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Dashboard/Dashboard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Dashboard/loginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Dashboard/loginPage.jsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2SnhZDgwBsQkfgipxLjf7a8BaWJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;AppointmentBooking&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ashwi\OneDrive\Desktop\CapstoneProject\TinkerManagementWeb\src\Pages\Dashboard" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="75be1737-a849-484e-adbe-0370208e29a0" name="Changes" comment="" />
+      <created>1689788305613</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1689788305613</updated>
+      <workItem from="1689788308185" duration="3812000" />
+      <workItem from="1689901444716" duration="593000" />
+      <workItem from="1690394972735" duration="13884000" />
+      <workItem from="1690483030552" duration="1666000" />
+      <workItem from="1690826929013" duration="1385000" />
+      <workItem from="1690903525409" duration="369000" />
+      <workItem from="1690903925198" duration="6033000" />
+      <workItem from="1690923433808" duration="3262000" />
+      <workItem from="1691002545968" duration="25000" />
+      <workItem from="1691009484816" duration="6568000" />
+      <workItem from="1691189062548" duration="202000" />
+      <workItem from="1691189280537" duration="174000" />
+      <workItem from="1691189479379" duration="2722000" />
+    </task>
+    <task id="LOCAL-00001" summary="Tinker List">
+      <option name="closed" value="true" />
+      <created>1690405220561</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1690405220561</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Tinker List">
+      <option name="closed" value="true" />
+      <created>1690409213250</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1690409213250</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Booking Validation">
+      <option name="closed" value="true" />
+      <created>1690906440918</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1690906440918</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Color changes">
+      <option name="closed" value="true" />
+      <created>1690927015596</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1690927015596</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Connecting frontend and backend changes">
+      <option name="closed" value="true" />
+      <created>1691180681617</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1691180681617</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Tinker List" />
+    <MESSAGE value="Booking Validation" />
+    <MESSAGE value="Color changes" />
+    <MESSAGE value="Connecting frontend and backend changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Connecting frontend and backend changes" />
+  </component>
+</project>
