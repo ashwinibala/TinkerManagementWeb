@@ -33,7 +33,7 @@ const Header = () => {
                 data-te-ripple-init
                 data-te-ripple-color="light"
               >
-                Home
+                Logout
               </a>
             </li>
           </ul>
