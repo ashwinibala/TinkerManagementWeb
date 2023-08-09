@@ -73,7 +73,6 @@ export default function ServiceTime({bookingError}) {
                         <option value="2">10am - 12pm</option>
                         <option value="3">12pm - 2pm</option>
                         <option value="4">2pm - 4pm</option>
-                        <option value="4">4pm - 6pm</option>
                     </select>
 
                 </div>
