@@ -62,7 +62,7 @@ export default function Final({clientDetails}) {
           <div className="text-lg font-semibold text-gray-500">
             {sContent}
           </div>
-          <a className="mt-10" href="/">
+          <a className="mt-10" href="/login">
             <button className="h-10 px-5 text-blue-700 transition-colors duration-150 border border-gray-300 rounded-lg focus:shadow-outline hover:bg-blue-500 hover:text-blue-100">
               {button}
             </button>

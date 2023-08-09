@@ -149,14 +149,12 @@ const handleClick = async () => {
                                 style={{background: 'linear-gradient(to right, #00b4d8, #008cbb, #005b96, #03396c)'}}>
                                 <div className="px-4 py-6 text-white md:mx-6 md:p-12">
                                   <h4 className="mb-6 text-xl font-semibold">
-                                    We are more than just a company
+                                  Unlocking Convenience
                                   </h4>
-                                  <p className="text-sm">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing
-                                    elit, sed do eiusmod tempor incididunt ut labore et
-                                    dolore magna aliqua. Ut enim ad minim veniam, quis
-                                    nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                    ea commodo consequat.
+                                  <p className="text-xl">
+                                  Our Tinker Management System seamlessly connects you with skilled 
+                                  professionals for all your household needs. From repairs to renovations, 
+                                  experience efficiency at your fingertips. Embrace hassle-free home care today!
                                   </p>
                                 </div>
                               </div>
